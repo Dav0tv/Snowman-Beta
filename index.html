@@ -44,7 +44,7 @@
 </table>
 </div>
 <!-- SnowMan -->
-<img src="https://dav0tv.github.io/Snowman-Beta/images/Stage1.png" />
+<img id="snowman" src="https://dav0tv.github.io/Snowman-Beta/images/Stage1.png" />
 <!-- Words -->
 
 <!--  -->
@@ -59,11 +59,24 @@
 var letterboard = 0;
 var guesses = 0;
 var words = 0;
-var snowman = 0;
+var snowman = 1;
 
 
 function makeMove(id) {
-alert (id);
+    alert(id);
+
+    if (id == "A" && snowman == 1); {
+        document.getElementById("snowman").src = "https://dav0tv.github.io/Snowman-Beta/images/Stage2.png"
+        var snowman = 2;
+        alert(snowman);
+        return;
+    }
+    
+    if (id == "A" && snowman ==2); {
+        document.getElementById("snowman").src = "https://dav0tv.github.io/Snowman-Beta/images/Stage3.png"
+        var snowman = 3;
+        return;
+    }
 }
 
 
