@@ -6,3 +6,7 @@ margin-top: 300px;
 td {
   font-size: 70px
 }
+
+td:hover {
+    background-color: yellow;
+}
