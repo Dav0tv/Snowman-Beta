@@ -63,7 +63,7 @@
 
 
 <script type="text/javascript">
-//debugger
+debugger
 var guessedLetter = 0;
 var currentWordlength;
 var gameArray = Array("dog", "cat", "mossman");
@@ -92,8 +92,22 @@ document.getElementById("gameZone").style.textAlign = "centre";
 
 function makeMove(id) {
     alert(id);
+    for (var i = 0; i < currentWordLength; i++) {
+        if (currentWordArray[i] == id) {
+          alert("correct guess")
+          statusArray[i] = id;
+          status = statusArray.join(" ");
+
+        } else {
+          alert("incorrect guess");
+        }
+
+        status = statusArray.join(" ");
+        document.getElementById("gameZone").innerHTML = status;
+        document.getElementById("gameZone").style.fontSize = "100px";
+        document.getElementById("gameZone").style.textAlign = "centre";
+    }
 
 }
-
 
 </script>
