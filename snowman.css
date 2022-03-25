@@ -3,6 +3,12 @@
 margin-top: 300px;
 }
 
+#gameZone{
+  margin-top: 100px;
+  text-align: center;
+}
+
+
 td {
   font-size: 70px
 }
