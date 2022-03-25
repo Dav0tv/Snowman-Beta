@@ -4,8 +4,7 @@
     <meta charset="utf-8">
     <title>SnowMan</title>
 </head>
-<body></body>
-</html>
+<body>
   <link rel="stylesheet" href="snowman.css">
 
 
@@ -56,14 +55,15 @@
 
 <!--  -->
 
-
+</body>
+</html>
 
 
 
 
 
 <script type="text/javascript">
-debugger
+//debugger
 var guessedLetter = 0;
 var currentWordlength;
 var gameArray = Array("dog", "cat", "mossman");
@@ -71,18 +71,18 @@ var currentWord;
 var currentWordArray = Array();
 var statusArray = Array();
 var status;
-var level;
+var level=0;
 
-
+loadGame();
 function loadGame() {
 
-currentWord = gameArray[level];
-currentWordLength = currentWord.length;
+  currentWord = gameArray[level];
+  currentWordLength = currentWord.length;
 
-for (var i = 0; i < currentWordLength; i++) {
-  currentWordArray[i] = currentWord.charAt(i);
-  statusArray[i] = "_";
-  status = statusArray.join("");
+  for (var i = 0; i < currentWordLength; i++) {
+    currentWordArray[i] = currentWord.charAt(i);
+    statusArray[i] = "_";
+    status = statusArray.join(" ");
 }
 document.getElementById("gameZone").innerHTML = status;
 document.getElementById("gameZone").style.fontSize = "100px";
