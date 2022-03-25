@@ -13,7 +13,7 @@
 <div id="gameZone">
 </div>
 <br>
-<div>
+<div id="letterboard">
 <table>
 <tr>
 <td id='A' onclick= makeMove("a")> a </td>
@@ -64,9 +64,7 @@
 
 <script type="text/javascript">
 debugger
-var letterboard = 0;
-var guesses = 0;
-var words = 0;
+var guessedLetter = 0;
 var currentWordlength;
 var gameArray = Array("dog", "cat", "mossman");
 var currentWord;
@@ -74,7 +72,6 @@ var currentWordArray = Array();
 var statusArray = Array();
 var status;
 var level;
-var snowman = 1;
 
 
 function loadGame() {
@@ -88,6 +85,8 @@ for (var i = 0; i < currentWordLength; i++) {
   status = statusArray.join("");
 }
 document.getElementById("gameZone").innerHTML = status;
+document.getElementById("gameZone").style.fontSize = "100px";
+document.getElementById("gameZone").style.textAlign = "centre";
 }
 
 
