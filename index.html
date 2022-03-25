@@ -69,6 +69,7 @@ var guesses = 0;
 var words = 0;
 var wordlength;
 var gameArray = Array("dog", "cat", "mossman");
+var currentWord;
 var currentWordArray = Array();
 var statusArray = Array();
 var status;
@@ -76,14 +77,14 @@ var level;
 var snowman = 1;
 
 
-function loadGame(){
-currentWord = gameArray[level];
+function loadGame() {
 
+currentWord = gameArray[level];
 currentWordLength = currentWord.length;
 
 for (var i = 0; i < currentWordLength; i++) {
   currentWordArray[i] = currentWord.charAt(i);
-  statusArray[i] = "_"
+  statusArray[i] = "_";
   status = statusArray.join("");
 }
 document.getElementById('gameZone').innerHTML = status;
