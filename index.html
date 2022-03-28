@@ -72,6 +72,10 @@ var currentWordArray = Array();
 var statusArray = Array();
 var status;
 var level=0;
+var correctguesses = 0;
+var guess = 1;
+
+
 
 loadGame();
 function loadGame() {
@@ -91,16 +95,14 @@ document.getElementById("gameZone").style.textAlign = "centre";
 
 
 function makeMove(id) {
+  guess = 1;
     alert(id);
     for (var i = 0; i < currentWordLength; i++) {
         if (currentWordArray[i] == id) {
           alert("correct guess")
           statusArray[i] = id;
           status = statusArray.join(" ");
-
-        } else {
-          alert("incorrect guess");
-        }
+          var guess = 2;
 
         status = statusArray.join(" ");
         document.getElementById("gameZone").innerHTML = status;
@@ -109,5 +111,13 @@ function makeMove(id) {
     }
 
 }
+
+if (guess == 1) {
+  alert("incorrect guess")
+}
+
+}
+
+
 
 </script>
