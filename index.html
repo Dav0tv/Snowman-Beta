@@ -47,10 +47,6 @@
 </div>
 <!-- SnowMan -->
 <img id="snowman" src="https://dav0tv.github.io/Snowman-Beta/images/Stage1.png" />
-<img id="snowman" src="https://dav0tv.github.io/Snowman-Beta/images/Stage2.png" />
-<img id="snowman" src="https://dav0tv.github.io/Snowman-Beta/images/Stage3.png" />
-<img id="snowman" src="https://dav0tv.github.io/Snowman-Beta/images/Stage4.png" />
-<img id="snowman" src="https://dav0tv.github.io/Snowman-Beta/images/Stage5.png" />
 <!-- Words -->
 
 <!--  -->
@@ -72,14 +68,12 @@ var currentWordArray = Array();
 var statusArray = Array();
 var status;
 var level=0;
-var correctguesses = 0;
 var guess = 1;
-
-
+var incorrectguesses = 0;
 
 loadGame();
 function loadGame() {
-
+ incorrectguesses = 0;
   currentWord = gameArray[level];
   currentWordLength = currentWord.length;
 
@@ -113,7 +107,30 @@ function makeMove(id) {
 }
 
 if (guess == 1) {
-  alert("incorrect guess")
+  alert("incorrect guess");
+  incorrectguesses++
+  document.getElementById("snowman").src = "https://dav0tv.github.io/Snowman-Beta/images/Stage2.png"
+}
+
+if (incorrectguesses == 1) {
+    document.getElementById("snowman").src = "https://dav0tv.github.io/Snowman-Beta/images/Stage2.png"
+}
+
+if (incorrectguesses == 2) {
+    document.getElementById("snowman").src = "https://dav0tv.github.io/Snowman-Beta/images/Stage3.png"
+}
+
+if (incorrectguesses == 3) {
+    document.getElementById("snowman").src = "https://dav0tv.github.io/Snowman-Beta/images/Stage4.png"
+}
+
+if (incorrectguesses == 4) {
+    document.getElementById("snowman").src = "https://dav0tv.github.io/Snowman-Beta/images/Stage5.png"
+}
+
+if (incorrectguesses == 5) {
+  alert("Game Over");
+  location.reload()
 }
 
 }
