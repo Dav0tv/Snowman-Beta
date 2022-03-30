@@ -45,11 +45,10 @@
 </tr>
 </table>
 </div>
+
 <!-- SnowMan -->
 <img id="snowman" src="https://dav0tv.github.io/Snowman-Beta/images/Stage1.png" />
-<!-- Words -->
 
-<!--  -->
 
 </body>
 </html>
@@ -67,7 +66,7 @@ var currentWord;
 var currentWordArray = Array();
 var statusArray = Array();
 var status;
-var level=0;
+var level = 1;
 var guess = 1;
 var incorrectguesses = 0;
 
@@ -89,6 +88,9 @@ document.getElementById("gameZone").style.textAlign = "centre";
 
 
 function makeMove(id) {
+
+//document.getElementById(id).style.backgroundColor = "red";
+
   guess = 1;
     alert(id);
     for (var i = 0; i < currentWordLength; i++) {
@@ -103,7 +105,6 @@ function makeMove(id) {
         document.getElementById("gameZone").style.fontSize = "100px";
         document.getElementById("gameZone").style.textAlign = "centre";
     }
-
 }
 
 if (guess == 1) {
