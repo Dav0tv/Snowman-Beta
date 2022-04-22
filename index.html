@@ -89,7 +89,6 @@ document.getElementById("gameZone").style.textAlign = "centre";
 
 function makeMove(id) {
 
-//document.getElementById(id).style.backgroundColor = "red";
 
   guess = 1;
     alert(id);
@@ -104,6 +103,11 @@ function makeMove(id) {
         document.getElementById("gameZone").innerHTML = status;
         document.getElementById("gameZone").style.fontSize = "100px";
         document.getElementById("gameZone").style.textAlign = "centre";
+        /* Need To Fix (No Clue how its broken)
+        document.getElementById(id).style.backgroundColor = "red";
+        const element = document.getElementById(id);
+        element.disabled();
+        */
     }
 }
 
