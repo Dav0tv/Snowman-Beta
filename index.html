@@ -15,33 +15,33 @@
 <div id="letterboard">
 <table>
 <tr>
-<td id='A' onclick= makeMove("a")> a </td>
-<td id='B' onclick= makeMove("b")> b </td>
-<td id='C' onclick= makeMove("c")> c </td>
-<td id='D' onclick= makeMove("d")> d </td>
-<td id='E' onclick= makeMove("e")> e </td>
-<td id='F' onclick= makeMove("f")> f </td>
-<td id='G' onclick= makeMove("g")> g </td>
-<td id='H' onclick= makeMove("h")> h </td>
-<td id='I' onclick= makeMove("i")> i </td>
-<td id='J' onclick= makeMove("j")> j </td>
-<td id='K' onclick= makeMove("k")> k </td>
-<td id='L' onclick= makeMove("l")> l </td>
-<td id='M' onclick= makeMove("m")> m </td>
+<td id='a' onclick= makeMove("a")> a </td>
+<td id='b' onclick= makeMove("b")> b </td>
+<td id='c' onclick= makeMove("c")> c </td>
+<td id='d' onclick= makeMove("d")> d </td>
+<td id='e' onclick= makeMove("e")> e </td>
+<td id='f' onclick= makeMove("f")> f </td>
+<td id='g' onclick= makeMove("g")> g </td>
+<td id='h' onclick= makeMove("h")> h </td>
+<td id='i' onclick= makeMove("i")> i </td>
+<td id='j' onclick= makeMove("j")> j </td>
+<td id='k' onclick= makeMove("k")> k </td>
+<td id='l' onclick= makeMove("l")> l </td>
+<td id='m' onclick= makeMove("m")> m </td>
 </tr><tr>
-<td id='N' onclick= makeMove("n")> n </td>
-<td id='O' onclick= makeMove("o")> o </td>
-<td id='P' onclick= makeMove("p")> p </td>
-<td id='Q' onclick= makeMove("q")> q </td>
-<td id='R' onclick= makeMove("r")> r </td>
-<td id='S' onclick= makeMove("s")> s </td>
-<td id='T' onclick= makeMove("t")> t </td>
-<td id='U' onclick= makeMove("u")> u </td>
-<td id='V' onclick= makeMove("v")> v </td>
-<td id='W' onclick= makeMove("w")> w </td>
-<td id='X' onclick= makeMove("x")> x </td>
-<td id='Y' onclick= makeMove("y")> y </td>
-<td id='Z' onclick= makeMove("z")> z </td>
+<td id='n' onclick= makeMove("n")> n </td>
+<td id='o' onclick= makeMove("o")> o </td>
+<td id='p' onclick= makeMove("p")> p </td>
+<td id='q' onclick= makeMove("q")> q </td>
+<td id='r' onclick= makeMove("r")> r </td>
+<td id='s' onclick= makeMove("s")> s </td>
+<td id='t' onclick= makeMove("t")> t </td>
+<td id='u' onclick= makeMove("u")> u </td>
+<td id='v' onclick= makeMove("v")> v </td>
+<td id='w' onclick= makeMove("w")> w </td>
+<td id='x' onclick= makeMove("x")> x </td>
+<td id='y' onclick= makeMove("y")> y </td>
+<td id='z' onclick= makeMove("z")> z </td>
 </tr>
 </table>
 </div>
@@ -89,7 +89,7 @@ document.getElementById("gameZone").style.textAlign = "centre";
 
 function makeMove(id) {
 
-
+document.getElementById(id).style.backgroundColor = "red";
   guess = 1;
     alert(id);
     for (var i = 0; i < currentWordLength; i++) {
@@ -103,10 +103,9 @@ function makeMove(id) {
         document.getElementById("gameZone").innerHTML = status;
         document.getElementById("gameZone").style.fontSize = "100px";
         document.getElementById("gameZone").style.textAlign = "centre";
-        /* Need To Fix (No Clue how its broken)
-        document.getElementById(id).style.backgroundColor = "red";
-        const element = document.getElementById(id);
-        */
+
+
+
     }
 }
 
