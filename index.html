@@ -66,9 +66,10 @@ var currentWord;
 var currentWordArray = Array();
 var statusArray = Array();
 var status;
-var level = 1;
+var level = 0;
 var guess = 1;
 var incorrectguesses = 0;
+var correctguess = 0;
 
 loadGame();
 function loadGame() {
@@ -98,16 +99,27 @@ document.getElementById(id).style.backgroundColor = "red";
           statusArray[i] = id;
           status = statusArray.join(" ");
           var guess = 2;
+          correctguess ++;
 
         status = statusArray.join(" ");
         document.getElementById("gameZone").innerHTML = status;
         document.getElementById("gameZone").style.fontSize = "100px";
         document.getElementById("gameZone").style.textAlign = "centre";
 
+        if (correctguess == currentWordLength) {
+          alert("You Win");
+          correctguess = 0;
+          incorrectguesses = 0;
+          document.getElementById('snowman').src = "https://dav0tv.github.io/Snowman-Beta/images/Stage1.png"
+          level++;
+          loadGame();
+        }
 
 
     }
 }
+
+
 
 if (guess == 1) {
   alert("incorrect guess");
