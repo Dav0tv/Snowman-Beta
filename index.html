@@ -12,7 +12,7 @@
 <div id="gameZone">
 </div>
 <br>
-<div id="letterboard">
+<div class="letterboard" id="letterboard">
 <table>
 <tr>
 <td id='a' onclick= makeMove("a")> a </td>
@@ -110,6 +110,7 @@ document.getElementById(id).style.backgroundColor = "red";
           alert("You Win");
           correctguess = 0;
           incorrectguesses = 0;
+          document.getElementsByClassName('letterboard').style.backgroundColor = "green";
           document.getElementById('snowman').src = "https://dav0tv.github.io/Snowman-Beta/images/Stage1.png"
           level++;
           loadGame();
