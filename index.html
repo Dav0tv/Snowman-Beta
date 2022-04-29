@@ -61,7 +61,7 @@
 debugger
 var guessedLetter = 0;
 var currentWordlength;
-var gameArray = Array("dog", "cat", "mossman");
+var gameArray = Array("mossman","dog","cat","when","how","elephant","mine");
 var currentWord;
 var currentWordArray = Array();
 var statusArray = Array();
@@ -176,6 +176,7 @@ function win() {
   document.getElementById('x').style.backgroundColor = "green";
   document.getElementById('y').style.backgroundColor = "green";
   document.getElementById('z').style.backgroundColor = "green";
+  statusArray.length = 0;
   level++;
   loadGame();
 }
