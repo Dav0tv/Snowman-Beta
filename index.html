@@ -107,12 +107,7 @@ document.getElementById(id).style.backgroundColor = "red";
         document.getElementById("gameZone").style.textAlign = "centre";
 
         if (correctguess == currentWordLength) {
-          alert("You Win");
-          correctguess = 0;
-          incorrectguesses = 0;
-          document.getElementById('snowman').src = "https://dav0tv.github.io/Snowman-Beta/images/Stage1.png"
-          level++;
-          loadGame();
+          win();
         }
 
 
@@ -149,6 +144,42 @@ if (incorrectguesses == 5) {
 }
 
 }
+
+function win() {
+  alert("You Win");
+  correctguess = 0;
+  incorrectguesses = 0;
+  document.getElementById('snowman').src = "https://dav0tv.github.io/Snowman-Beta/images/Stage1.png"
+  document.getElementById('a').style.backgroundColor = "green";
+  document.getElementById('b').style.backgroundColor = "green";
+  document.getElementById('c').style.backgroundColor = "green";
+  document.getElementById('d').style.backgroundColor = "green";
+  document.getElementById('e').style.backgroundColor = "green";
+  document.getElementById('f').style.backgroundColor = "green";
+  document.getElementById('g').style.backgroundColor = "green";
+  document.getElementById('h').style.backgroundColor = "green";
+  document.getElementById('i').style.backgroundColor = "green";
+  document.getElementById('j').style.backgroundColor = "green";
+  document.getElementById('k').style.backgroundColor = "green";
+  document.getElementById('l').style.backgroundColor = "green";
+  document.getElementById('m').style.backgroundColor = "green";
+  document.getElementById('n').style.backgroundColor = "green";
+  document.getElementById('o').style.backgroundColor = "green";
+  document.getElementById('p').style.backgroundColor = "green";
+  document.getElementById('q').style.backgroundColor = "green";
+  document.getElementById('r').style.backgroundColor = "green";
+  document.getElementById('s').style.backgroundColor = "green";
+  document.getElementById('t').style.backgroundColor = "green";
+  document.getElementById('u').style.backgroundColor = "green";
+  document.getElementById('v').style.backgroundColor = "green";
+  document.getElementById('w').style.backgroundColor = "green";
+  document.getElementById('x').style.backgroundColor = "green";
+  document.getElementById('y').style.backgroundColor = "green";
+  document.getElementById('z').style.backgroundColor = "green";
+  level++;
+  loadGame();
+}
+
 
 
 </script>
