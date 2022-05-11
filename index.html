@@ -7,7 +7,7 @@
 <body>
   <link rel="stylesheet" href="snowman.css">
 
-
+<h2 id="score">0</h2>
 <!-- letterboard -->
 <div id="gameZone">
 </div>
@@ -61,7 +61,7 @@
 debugger
 var guessedLetter = 0;
 var currentWordlength;
-var gameArray = Array("mossman","dog","cat","when","how","elephant","mine");
+var gameArray = Array("the","be","of","and","a","to","in","he","have","it","about","than","into","could","state","only","new","year","some","take","because","good","each","those","feel","seem","how","high","too","place","form","off","child","few","small","since","against","ask","late","home","city","put","close","case","force","meet","once","water","upon","war","though","young","less","enough","almost","read","include","president","nothing","yet","simple","within","love","human","along","appear","doctor","believe","speak","active","easy","although","record","sit","determine","level","local","sure","receive","thus","agree","arm","mother","across","quite","anything","town","past","view","society","success","minute","remember","purpose","test","fight","watch","situation","south","outside","that","for","they","I","with","as","not","on","she","at","come","these","know","see","use","get","like","then","first","any","little","world","very","still","nation","hand","old","life","tell","write","interest","large","person","end","open","public","follow","during","present","without","build","hear","light","unite","live","every","country","bring","center","let","better","big","boy","cost","business","value","second","why","clear","expect","student","month","drive","concern","best","door","hope","example","inform","body","moment","spirit","train","college","religion","perhaps","music","grow","free","cause","manage","answer","break","organize","half","fire","lose","money","stop","actual","ago","difference","stage","father","table","rest","bear","entire","market","prepare","by","this","we","you","do","but","from","or","which","one","work","now","may","such","give","over","think","most","even","find","become","here","show","house","Both","between","need","mean","call","develop","again","hold","govern","around","possible","head","consider","word","program","problem","side","try","provide","continue","name","certain","power","pay","result","question","family","complete","act","sense","mind","experience","art","next","near","direct","ever","least","probable","understand","reach","effect","different","idea","whole","control","serve","age","book","board","recent","sound","office","cut","step","class","already","effort","wait","department","able","political","learn","voice","air","together","explain","offer","plant","charge","ground","west","picture","hard","front","lie","would","all","will","there","say","who","make","when","can","more","day","also","after","way","many","must","look","before","great","back","under","last","right","move","thing","general","school","never","same","another","however","lead","system","set","order","eye","plan","run","keep","face","study","woman","member","until","far","night","always","service","away","report","car","law","industry","important","girl","god","several","matter","usual","rather","condition","field","pass","fall","note","special","talk","particular","today","measure","true","history","position","above","strong","friend","necessary","add","court","deal","shall","cover","common","subject","draw","short","wife","treat","limit","road","modern","dark","surface","rule","regard","dance","peace","observe","future","wall","if","no","man","out","other","so","what","time","up","go","through","long","where","much","should","well","people","down","own","just","begin","while","number","part","turn","real","leave","might","want","point","fact","group","play","stand","increase","early","course","change","help","line","something","company","week","church","toward","start","social","room","figure","nature","per","often","kind","among","white","reason","action","return","foot","care","walk","teach","low","hour","type","carry","rate","remain","full","street","tax","support","party","whether","either","land","material","happen","education","Death","letter","color","behind","produce","send","term","total","university","rise","century","farm","claim","firm","operation","further","pressure","property","morning","amount","top");
 var currentWord;
 var currentWordArray = Array();
 var statusArray = Array();
@@ -70,9 +70,12 @@ var level = 0;
 var guess = 1;
 var incorrectguesses = 0;
 var correctguess = 0;
+var score = 0;
 
 loadGame();
 function loadGame() {
+
+level = Math.floor(Math.random() * 500);
  incorrectguesses = 0;
   currentWord = gameArray[level];
   currentWordLength = currentWord.length;
@@ -100,11 +103,13 @@ document.getElementById(id).style.backgroundColor = "red";
           status = statusArray.join(" ");
           var guess = 2;
           correctguess ++;
+          score++;
 
         status = statusArray.join(" ");
         document.getElementById("gameZone").innerHTML = status;
         document.getElementById("gameZone").style.fontSize = "100px";
         document.getElementById("gameZone").style.textAlign = "centre";
+        document.getElementById("score").innerHTML = score;
 
         if (correctguess == currentWordLength) {
           win();
@@ -119,6 +124,8 @@ document.getElementById(id).style.backgroundColor = "red";
 if (guess == 1) {
   alert("incorrect guess");
   incorrectguesses++
+  score--;
+  document.getElementById("score").innerHTML = score;
   document.getElementById("snowman").src = "https://dav0tv.github.io/Snowman-Beta/images/Stage2.png"
 }
 
