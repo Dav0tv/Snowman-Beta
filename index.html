@@ -47,7 +47,7 @@
 </div>
 
 <!-- SnowMan -->
-<img id="snowman" src="https://dav0tv.github.io/Snowman-Beta/images/Stage1.png" />
+<img id="snowman" src="https://dav0tv.github.io/Snowman-Beta/images/Stage1.png"/>
 
 
 </body>
@@ -73,6 +73,15 @@ var correctguess = 0;
 var score = 0;
 
 loadGame();
+
+document.addEventListener('keydown', (event) => {
+  var name = event.key;
+  var code = event.code;
+
+  makeMove(name);
+
+});
+
 function loadGame() {
 
 level = Math.floor(Math.random() * 500);
