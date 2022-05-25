@@ -101,13 +101,10 @@ document.getElementById("gameZone").style.textAlign = "centre";
 
 
 function makeMove(id) {
-
 document.getElementById(id).style.backgroundColor = "red";
   guess = 1;
-    alert(id);
     for (var i = 0; i < currentWordLength; i++) {
         if (currentWordArray[i] == id) {
-          alert("correct guess")
           statusArray[i] = id;
           status = statusArray.join(" ");
           var guess = 2;
@@ -131,7 +128,6 @@ document.getElementById(id).style.backgroundColor = "red";
 
 
 if (guess == 1) {
-  alert("incorrect guess");
   incorrectguesses++
   score--;
   document.getElementById("score").innerHTML = score;
@@ -155,6 +151,7 @@ if (incorrectguesses == 4) {
 }
 
 if (incorrectguesses == 5) {
+  alert(currentWord);
   alert("Game Over");
   location.reload();
 }
